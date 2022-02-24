@@ -169,4 +169,24 @@ label.toggle-item::before {
 #normal:checked + label::before {
   left: 67px;
 }
+
+.transparent label {
+  background: transparent;
+  border: 3px solid var(--white);
+  height: 3.35em;
+}
+
+.transparent label::before {
+  border: 3px solid var(--white);
+  width: 2em;
+  height: 2em;
+  top: .3em;
+  left: .3em;
+  background: var(--white);
+}
+
+#transparent:checked + label::before {
+  -webkit-transform: translateX(59px);
+          transform: translateX(59px);
+}
 /*# sourceMappingURL=style.css.map */
