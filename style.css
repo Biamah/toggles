@@ -1,17 +1,19 @@
 :root {
   --tuna: #2e394d;
-  --brandy: #dec387;
-  --pink: #de8797;
   --blue: #87aade;
-  --green: #c5de87;
-  --cyan: #87ded2;
   --magenta: #c487de;
+  --pink: #de8797;
   --light-coral: #de8787;
-  --green-beige: #decf87;
-  --frog-green: #88cf8f;
   --red: #af4c4c;
-  --white: #fff;
+  --medium-red: #c34a4a;
+  --green-beige: #decf87;
+  --brandy: #dec387;
+  --green: #c5de87;
+  --frog-green: #88cf8f;
+  --yellow-green: #8BC34A;
   --medium-green: #4caf50;
+  --cyan: #87ded2;
+  --white: #fff;
 }
 
 body {
@@ -188,5 +190,60 @@ label.toggle-item::before {
 #transparent:checked + label::before {
   -webkit-transform: translateX(59px);
           transform: translateX(59px);
+}
+
+.checkcross label:before {
+  content: none;
+}
+
+.checkcross .check {
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  position: absolute;
+  background: var(--yellow-green);
+  -webkit-transition: .4s ease;
+  transition: .4s ease;
+  top: 4.5px;
+  left: 4.5px;
+}
+
+.checkcross .check::before, .checkcross .check::after {
+  height: 4px;
+  border-radius: 10px;
+  background: var(--white);
+  -webkit-transition: .4s ease;
+  transition: .4s ease;
+}
+
+.checkcross .check::before {
+  width: 25px;
+  -webkit-transform: rotate(-45deg) translate(-6px, 20px);
+          transform: rotate(-45deg) translate(-6px, 20px);
+}
+
+.checkcross .check::after {
+  width: 10px;
+  -webkit-transform: rotate(45deg) translate(20px, 11px);
+          transform: rotate(45deg) translate(20px, 11px);
+}
+
+#checkcross:checked + label .check {
+  left: 68px;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  background: var(--medium-red);
+}
+
+#checkcross:checked + label .check::before {
+  width: 27px;
+  -webkit-transform: rotate(-45deg) translate(-8px, 18px);
+          transform: rotate(-45deg) translate(-8px, 18px);
+}
+
+#checkcross:checked + label .check::after {
+  width: 27px;
+  -webkit-transform: rotate(45deg) translate(18px, 8px);
+          transform: rotate(45deg) translate(18px, 8px);
 }
 /*# sourceMappingURL=style.css.map */
