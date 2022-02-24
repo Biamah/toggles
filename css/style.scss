@@ -1,0 +1,91 @@
+@import './_toggle-normal';
+@import './toggle-transparent';
+@import './toggle-checkcross';
+@import './toggle-gravity';
+
+:root {
+    --tuna: #2e394d;
+    --blue: #87aade;
+    --magenta: #c487de;
+    --pink: #de8797;
+    --light-coral: #de8787;
+    --red: #af4c4c;
+    --medium-red: #c34a4a;
+    --green-beige: #decf87;
+    --brandy: #dec387;
+    --green: #c5de87;
+    --frog-green: #88cf8f;
+    --yellow-green: #8BC34A;
+    --medium-green: #4caf50;
+    --cyan: #87ded2;
+    --white: #fff;
+}
+
+body {
+    background: var(--tuna);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    box-sizing: border-box;
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+    }
+}
+
+input {
+    height: 40px;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 40px;
+}
+
+.toggle-wrapper {
+    flex: 1 1 calc(100% / 3);
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+
+    &:nth-child(1){
+        background: var(--brandy);
+    }
+
+    &:nth-child(2){
+        background: var(--pink);
+    }
+
+    &:nth-child(3) {
+        background: var(--blue);
+    }
+
+    &:nth-child(4) {
+        background: var(--green);
+    }
+
+    &:nth-child(5){
+        background: var(--cyan);
+    }
+
+    &:nth-child(6){
+        background: var(--magenta);
+    }
+
+    &:nth-child(7){
+        background: var(--light-coral);
+    }
+
+    &:nth-child(8){
+        background: var(--green-beige);
+    }
+}
+

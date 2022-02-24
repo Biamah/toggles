@@ -1,0 +1,21 @@
+.transparent {
+    label {
+        background: transparent;
+        border: 3px solid var(--white);
+        height: 3.35em;
+        &::before {
+            border: 3px solid var(--white);
+            width: 2em;
+            height: 2em;
+            top: .3em;
+            left: .3em;
+            background: var(--white);
+        }
+    }
+}
+
+#transparent:checked + label {
+    &::before {
+        transform: translateX(59px);
+    }
+}

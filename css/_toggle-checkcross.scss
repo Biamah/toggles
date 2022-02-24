@@ -1,0 +1,50 @@
+.checkcross {
+    label:before {
+        content: none;
+    }
+    .check {
+        border-radius: 50%;
+        width: 2.5em;
+        height: 2.5em;
+        position: absolute;
+        background: var(--yellow-green);
+        transition: .4s ease;
+        top: 4.5px;
+        left: 4.5px;
+
+        &::before, &::after {
+            height: 4px;
+            border-radius: 10px;
+            background: var(--white);
+            transition: .4s ease;
+        }
+
+        &::before {
+            width: 25px;
+            transform: rotate(-45deg) translate(-6px, 20px);
+        }
+
+        &::after {
+            width: 10px;
+            transform: rotate(45deg) translate(20px, 11px);
+        }
+    }
+}
+
+#checkcross:checked + label {
+    .check {
+        left: 68px;
+        transform: rotate(360deg);
+        background: var(--medium-red);
+
+        &::before {
+            width: 27px;
+            transform: rotate(-45deg) translate(-8px, 18px);
+        }
+
+        &::after {
+            width: 27px;
+            transform: rotate(45deg) translate(18px, 8px);
+        }
+    }
+}
