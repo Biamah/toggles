@@ -2,6 +2,7 @@
 @import './toggle-transparent';
 @import './toggle-checkcross';
 @import './toggle-gravity';
+@import './toggle-pancake-stack';
 
 :root {
     --tuna: #2e394d;
@@ -12,7 +13,12 @@
     --red: #af4c4c;
     --medium-red: #c34a4a;
     --green-beige: #decf87;
+    --light-gold: #fbdb60;
     --brandy: #dec387;
+    --orange: #fbbe7c;
+    --reddish-orange: #e27c31;
+    --carrot-orange: #ef8927;
+    --brownish-orange: #d67823;
     --green: #c5de87;
     --frog-green: #88cf8f;
     --yellow-green: #8BC34A;

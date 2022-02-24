@@ -1,0 +1,83 @@
+.pancake-stack {
+    label:before {
+        content: none;
+    }
+
+    .pancakes {
+        transition: .6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .pancake {
+        background: var(--reddish-orange);
+        border-radius: 50%;
+        width: 2.5em;
+        height: 2.5em;
+        position: absolute;
+        transition: .4s ease;
+        top: 2px;
+        left: 4px;
+        box-shadow: 0 2px 0 2px var(--orange);
+
+        &:nth-child(2){
+            left: 0;
+            top: -3px;
+            transform: scale(0);
+            transition: .2s ease .2s;
+        }
+        &:nth-child(3){
+            top: -8px;
+            transform: scale(0);
+            transition: .2s ease .2s;
+            &::before, &::after {
+                background: var(--carrot-orange);
+                border-radius: 20px;
+                width: 50%;
+                height: 20%;
+            }
+            &::before {
+                top: 20px;
+                left: 5px;
+            }
+            &::after {
+                top: 22px;
+                left: 5px;
+            }
+        }
+    }
+
+    .butter {
+        width: 12px;
+        height: 11px;
+        background: var(--light-gold);
+        top: 6px;
+        left: 20px;
+        position: absolute;
+        border-radius: 4px;
+        box-shadow: 0 1px 0 1px var(--brownish-orange);
+        transform: scale(0);
+        transition: .2s ease;
+    }
+}
+
+#pancake:checked {
+    + label {
+        .pancakes {
+            transform: translateX(70px);
+        }
+        .pancake {
+            &:nth-child(2) {
+                transform: scale(1);
+                transition-delay: .2s;
+            }
+
+            &:nth-child(3){
+                transform: scale(1);
+                transition-delay: .4s;
+            }
+        }
+        .butter {
+            transform: scale(1);
+            transition-delay: .6s;
+        }
+    }
+}

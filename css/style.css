@@ -159,6 +159,105 @@ label.toggle-item::before {
   transition: 0.6s cubic-bezier(0.895, 0.03, 0.685, 0.22) 0.2s;
 }
 
+.pancake-stack label:before {
+  content: none;
+}
+
+.pancake-stack .pancakes {
+  -webkit-transition: 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.pancake-stack .pancake {
+  background: var(--reddish-orange);
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  position: absolute;
+  -webkit-transition: .4s ease;
+  transition: .4s ease;
+  top: 2px;
+  left: 4px;
+  -webkit-box-shadow: 0 2px 0 2px var(--orange);
+          box-shadow: 0 2px 0 2px var(--orange);
+}
+
+.pancake-stack .pancake:nth-child(2) {
+  left: 0;
+  top: -3px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: .2s ease .2s;
+  transition: .2s ease .2s;
+}
+
+.pancake-stack .pancake:nth-child(3) {
+  top: -8px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: .2s ease .2s;
+  transition: .2s ease .2s;
+}
+
+.pancake-stack .pancake:nth-child(3)::before, .pancake-stack .pancake:nth-child(3)::after {
+  background: var(--carrot-orange);
+  border-radius: 20px;
+  width: 50%;
+  height: 20%;
+}
+
+.pancake-stack .pancake:nth-child(3)::before {
+  top: 20px;
+  left: 5px;
+}
+
+.pancake-stack .pancake:nth-child(3)::after {
+  top: 22px;
+  left: 5px;
+}
+
+.pancake-stack .butter {
+  width: 12px;
+  height: 11px;
+  background: var(--light-gold);
+  top: 6px;
+  left: 20px;
+  position: absolute;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 0 1px var(--brownish-orange);
+          box-shadow: 0 1px 0 1px var(--brownish-orange);
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+}
+
+#pancake:checked + label .pancakes {
+  -webkit-transform: translateX(70px);
+          transform: translateX(70px);
+}
+
+#pancake:checked + label .pancake:nth-child(2) {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition-delay: .2s;
+          transition-delay: .2s;
+}
+
+#pancake:checked + label .pancake:nth-child(3) {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition-delay: .4s;
+          transition-delay: .4s;
+}
+
+#pancake:checked + label .butter {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition-delay: .6s;
+          transition-delay: .6s;
+}
+
 :root {
   --tuna: #2e394d;
   --blue: #87aade;
@@ -168,7 +267,12 @@ label.toggle-item::before {
   --red: #af4c4c;
   --medium-red: #c34a4a;
   --green-beige: #decf87;
+  --light-gold: #fbdb60;
   --brandy: #dec387;
+  --orange: #fbbe7c;
+  --reddish-orange: #e27c31;
+  --carrot-orange: #ef8927;
+  --brownish-orange: #d67823;
   --green: #c5de87;
   --frog-green: #88cf8f;
   --yellow-green: #8BC34A;
