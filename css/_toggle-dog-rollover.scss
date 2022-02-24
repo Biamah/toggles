@@ -1,0 +1,99 @@
+.dog-rollover {
+    label {
+        &::before{
+            content: none;
+        }
+        .dog {
+            display: inline-block;
+            position: absolute;
+            width: 2.5em;
+            height: 2.5em;
+            top: .25em;
+            left: .2em;
+            transition: .6s ease;
+        }
+        .eyes {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: var(--dark);
+            border-radius: 50%;
+            transform: translate(8px, 14px);
+            box-shadow: 16px 0 0 var(--dark), 22px -4px 0 12px var(--dark-yellow);
+        }
+        .ear {
+            width: 18px;
+            height: 20px;
+            position: absolute;
+            left: -4px;
+            bottom: 80%;
+            background: var(--golden-yellow);
+            margin-bottom: -5px;
+            border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+            box-shadow: inset 4px 0 0 0px var(--white), inset -4px 0 0 0px var(--white);
+            transform: rotate(-40deg);
+
+            &.right {
+                transform: rotate(60deg) scaleX(-1);
+                left: auto;
+                transform-origin: center bottom;
+                transition: .4s ease-in-out;
+                right: 0;
+            }
+        }
+        .face {
+            overflow: hidden;
+            border-radius: 50%;
+            width: 2.5em;
+            height: 2.5em;
+            position: absolute;
+            background: var(--white);
+            z-index: 8;
+        }
+        .mouth {
+            position: absolute;
+            background: var(--dark);
+            width: 14px;
+            height: 7px;
+            left: 50%;
+            margin-left: -7px;
+            bottom: 12px;
+            border-radius: 2px 2px 20px 20px;
+            bottom: 8px;
+            transform: scale(0);
+            transition: .1s ease;
+
+            &::before {
+                width: 8px;
+                height: 8px;
+                background: var(--rosy-pink);
+                border-radius: 0 0 50% 50%;
+                transform: translate(3px, 5px);
+            }
+        }
+        &::before {
+            border-color: var(--white);
+            background: var(--white);
+        }
+    }
+}
+
+#doggo:checked {
+    ~ .cup {
+        animation: .2s linear cup 1s forwards;
+    }
+    + label {
+        .dog {
+            left: 68px;
+            transform: rotate(360deg);
+        }
+        .mouth {
+            transform: scale(1);
+            transition-delay: .7s;
+        }
+        .ear.right {
+            transform: scaleX(-1) rotate(-35deg);
+            transition-delay: .6s;
+        }
+    }
+}

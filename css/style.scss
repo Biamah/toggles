@@ -3,16 +3,21 @@
 @import './toggle-checkcross';
 @import './toggle-gravity';
 @import './toggle-pancake-stack';
+@import './toggle-dog-rollover';
 
 :root {
     --tuna: #2e394d;
+    --dark: #222;
     --blue: #87aade;
     --magenta: #c487de;
     --pink: #de8797;
     --light-coral: #de8787;
+    --rosy-pink: #ec788d;
     --red: #af4c4c;
     --medium-red: #c34a4a;
     --green-beige: #decf87;
+    --dark-yellow: #e4ac04;
+    --golden-yellow: #f9bb00;
     --light-gold: #fbdb60;
     --brandy: #dec387;
     --orange: #fbbe7c;
