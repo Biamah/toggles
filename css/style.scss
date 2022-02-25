@@ -5,8 +5,10 @@
 @import './toggle-pancake-stack';
 @import './toggle-dog-rollover';
 @import './basketball-hoop';
+@import './beer-pong';
 
 :root {
+    --silver: #c6c5c5;
     --tuna: #2e394d;
     --dark: #222;
     --black: #000000;
@@ -37,6 +39,8 @@
     --medium-green: #4caf50;
     --cyan: #87ded2;
     --white: #fff;
+    --snow-white: #f9f9f9;
+    --soft-white: #efefef;
 }
 
 body {
@@ -104,10 +108,28 @@ input {
 
     &:nth-child(7){
         background: var(--light-coral);
+        .toggle {
+			transform: translate(-40px, 40px);
+		}
     }
 
     &:nth-child(8){
         background: var(--green-beige);
+        .toggle {
+			transform: translate(-40px, 40px);
+		}
     }
+}
+
+.name {
+	width: 80%;
+	position: absolute;
+	font: 500 14px 'Rubik', sans-serif;
+	letter-spacing: .5px;
+	text-transform: uppercase;
+	text-shadow: 0 1px 1px rgba(0,0,0,0.4);
+	bottom: 15px;
+	right: 15px;
+	text-align: right;
 }
 
