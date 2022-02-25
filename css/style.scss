@@ -4,19 +4,25 @@
 @import './toggle-gravity';
 @import './toggle-pancake-stack';
 @import './toggle-dog-rollover';
+@import './basketball-hoop';
 
 :root {
     --tuna: #2e394d;
     --dark: #222;
+    --black: #000000;
     --blue: #87aade;
+    --purple: #542583;
     --magenta: #c487de;
     --pink: #de8797;
     --light-coral: #de8787;
     --rosy-pink: #ec788d;
     --red: #af4c4c;
     --medium-red: #c34a4a;
+    --red-orange: #f44336;
+    --fire-red: #cd2e22;
     --green-beige: #decf87;
     --dark-yellow: #e4ac04;
+    --golden-brown: #fdb827;
     --golden-yellow: #f9bb00;
     --light-gold: #fbdb60;
     --brandy: #dec387;
@@ -24,6 +30,7 @@
     --reddish-orange: #e27c31;
     --carrot-orange: #ef8927;
     --brownish-orange: #d67823;
+    --dark-orange: #FF9800;
     --green: #c5de87;
     --frog-green: #88cf8f;
     --yellow-green: #8BC34A;
